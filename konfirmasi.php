@@ -244,6 +244,7 @@ if(isset($_POST['confirm']))
 					<br>
 					<h6>Tanggal Bayar</h6>
 					<input type="date" class="form-control" name="tanggal">
+					<!-- <input type="file" class="form-control" name="tanggal"> -->
 					<input type="submit" name="confirm" value="Kirim">
 				</form>
 			</div>

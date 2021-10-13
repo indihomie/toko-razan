@@ -182,9 +182,10 @@ if(isset($_POST['adduser']))
 				<h5>Informasi Pribadi</h5>
 				<form method="post">
 					<input type="text" name="nama" placeholder="Nama Lengkap" required>
-					<input type="text" name="telp" placeholder="Nomor Telepon" required maxlength="13">
-					<input type="text" name="alamat" placeholder="Alamat Lengkap" required>
-				
+					<input type="tel" name="telp" placeholder="Nomor Telepon" required maxlength="13"onkeypress="return onlyNumberKey(event)">
+					<!-- <input type="text" name="alamat" placeholder="Alamat Lengkap" required> -->
+			
+					<textarea type="text" name="alamat" placeholder="Alamat Lengkap" required></textarea>
 				<h6>Informasi Login</h6>
 					
 					<input type="email" name="email" placeholder="Email" required="@">
@@ -279,6 +280,15 @@ if(isset($_POST['adduser']))
 			});
 			
 		});
+
+		function onlyNumberKey(evt) {
+          
+		  // Only ASCII character in that range allowed
+		  var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+		  if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+			  return false;
+		  return true;
+	  }
 </script>	
 <!-- //main slider-banner --> 
 </body>

@@ -908,7 +908,13 @@ a.w3_agile_vimeo:hover{
 	background:#F7F7F9;
 	margin:3em auto 0;
 }
-.login-form-grids input[type="email"],.login-form-grids input[type="password"],.login-form-grids input[type="text"]{
+.login-form-grids input[type="email"],
+.login-form-grids input[type="password"],
+.login-form-grids input[type="text"],
+.login-form-grids textarea,
+.login-form-grids input[type="tel"]
+{
+    margin: 1em auto 0;
 	outline: none;
     border: 1px solid #DBDBDB;
     padding: 10px 10px 10px 10px;
@@ -917,6 +923,12 @@ a.w3_agile_vimeo:hover{
     display: block;
     width: 100%;
 }
+
+.login-form-grids textarea {
+    resize: none;
+    height: 6em;
+}
+
 
 .login-form-grids input[type="password"]{
 	margin:1em 0 0;
@@ -3391,4 +3403,10 @@ td.invert-image a img {
 .w3agile_description p {
     font-size: 13px;
 }
+}
+
+.norek {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

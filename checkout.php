@@ -206,7 +206,7 @@ if(isset($_POST["checkout"])){
 							
 						
 							<th>Sub Total</th>
-							<th>Hapus</th>
+							<!-- <th>Hapus</th> -->
 						</tr>
 					</thead>
 					
@@ -229,12 +229,12 @@ if(isset($_POST["checkout"])){
 						</td>
 				
 						<td class="invert">Rp<?= number_format($b['hargaafter']*$b['qty']) ?></td>
-						<td class="invert">
+						<!-- <td class="invert"> -->
 							<div class="rem">
 							
-								<input type="submit" name="update" class="form-control" value="Update" \>
 								<input type="hidden" name="idproduknya" value="<?= $b['idproduk'] ?>" \>
-								<input type="submit" name="hapus" class="form-control" value="Hapus" \>
+								<!-- <input type="submit" name="update" class="form-control" value="Update" \> -->
+								<!-- <input type="submit" name="hapus" class="form-control" value="Hapus" \> -->
 							</form>
 							</div>
 							<script>$(document).ready(function(c) {
@@ -304,23 +304,25 @@ if(isset($_POST["checkout"])){
 			<h2>Bila telah melakukan pembayaran, harap konfirmasikan pembayaran Anda.</h2>
 			<br>
 			
-			
+			<div class="norek" >
 			<?php 
 			$metode = mysqli_query($conn,"select * from pembayaran");
 			
 			while($p=mysqli_fetch_array($metode)){
 				
 			?>
-			
+			<div>
 			<img src="<?= $p['logo'] ?>" width="300px" height="200px"><br>
         <h4><?= $p['metode'] ?> - <?= $p['norek'] ?><br>
         a/n. <?= $p['an'] ?></h4><br>
         <br>
 		 <hr>
+		 </div>
 			
 			<?php
 			}
 		?>
+		</div>
 		
 		<br>
         <br>
